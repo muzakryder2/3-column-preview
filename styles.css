@@ -1,0 +1,138 @@
+:root {
+  --sedansBg: hsl(31, 77%, 52%);
+  --suvsBg: hsl(184, 100%, 22%);
+  --luxuryBg: hsl(179, 100%, 13%);
+  --transparentWhite: hsla(0, 0%, 100%, 0.75);
+  --veryLightGray: hsl(0, 0%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  background-color: var(--veryLightGray);
+  position: relative;
+}
+
+button {
+  width: 150px;
+  height: 50px;
+  border: none;
+  padding: 25px;
+  border-radius: 25px;
+  font-size: 1rem;
+  line-height: 4px;
+  text-align: center;
+  vertical-align: middle;
+  letter-spacing: 0.3px;
+  color: inherit;
+  font-weight: 600;
+  transition: background-color 0.1s ease, color 0.1s ease;
+}
+
+button:hover {
+  width: 146px;
+  height: 46px;
+  cursor: pointer;
+  border: 2px solid var(--veryLightGray);
+  background-color: transparent;
+  color: var(--transparentWhite);
+}
+
+button:focus {
+  outline: none;
+}
+
+.container {
+  height: 63%;
+  width: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+}
+
+.card {
+  padding: 5% 6%;
+  line-height: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.icon {
+  width: 65px;
+  margin-bottom: 40px;
+}
+
+.title {
+  font-family: "Big Shoulders Display", cursive;
+  color: var(--veryLightGray);
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+.description {
+  color: var(--transparentWhite);
+  flex-grow: 2;
+}
+
+.sedans {
+  background-color: var(--sedansBg);
+  color: var(--sedansBg);
+}
+
+.suvs {
+  background-color: var(--suvsBg);
+  color: var(--suvsBg);
+}
+
+.luxury {
+  background-color: var(--luxuryBg);
+  color: var(--luxuryBg);
+}
+
+.attribution {
+  position: absolute;
+  width: 100%;
+  bottom: 50px;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 1024px) {
+  body {
+    height: max-content;
+  }
+
+  button {
+    margin: 25px 0;
+  }
+
+  .container {
+    position: unset;
+    transform: unset;
+    flex-direction: column;
+    width: auto;
+    margin: 20% 7%;
+  }
+
+  .attribution {
+    bottom: -30px;
+  }
+}
